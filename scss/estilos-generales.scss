@@ -1,0 +1,71 @@
+$pantalla-grande: 992px;
+$pantalla-chica: 576px;
+/*Header*/
+    /*Header__Menu*/
+        /*El mixin es copia de una seccion de bootstrap.css sobre navbar-expand en resolucion 992px, lo necesité para arreglar un problema de desincronización del h1/2 con el navbar
+        sin comprometer ni escribir más codigo*/
+@mixin menu-expansivo {
+    .navbar-expand-lg {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+      .navbar-expand-lg .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+      .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+      }
+      .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+      .navbar-expand-lg > .container,
+      .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+      }
+      .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+      }
+      .navbar-expand-lg .navbar-toggler {
+        display: none;
+      }
+    }
+/* Media query's para ajustar el menu y el h1/2 segun la resolucion*/
+@media screen and (min-width: $pantalla-chica){
+    .navbar-collapse--center{
+        justify-content: center;
+    }
+    .header-text{
+        text-align: center;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    @include menu-expansivo()
+}
+@media screen and (max-width:$pantalla-chica){
+    .navbar-brand{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .header-text{
+        display: none;
+    }
+}
+.active{border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829); ;}
+.header-text{
+    color: rgba(46, 46, 46, 0.911);
+    
+    &:hover{
+        text-decoration: none;
+        color: black;
+    }
+}
