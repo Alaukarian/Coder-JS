@@ -60,7 +60,10 @@ $pantalla-chica: 576px;
         display: none;
     }
 }
-.active{border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829); ;}
+@mixin activo(){
+  .active{border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829);}
+}
+
 .header-text{
     color: rgba(46, 46, 46, 0.911);
     
