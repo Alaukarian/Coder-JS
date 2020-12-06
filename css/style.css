@@ -3,7 +3,7 @@
 /*Header__Menu*/
 /*El mixin es copia de una seccion de bootstrap.css sobre navbar-expand en resolucion 992px, lo necesité para arreglar un problema de desincronización del h1/2 con el navbar
         sin comprometer ni escribir más codigo*/
-/* Media query's para ajustar el menu y el h1/2 segun la resolucion*/
+/* Media querys para ajustar el menu y el h1/2 segun la resolucion*/
 @media screen and (min-width: 576px) {
   .navbar-collapse--center {
     justify-content: center; }
@@ -49,3 +49,15 @@
   .header-text:hover {
     text-decoration: none;
     color: black; }
+
+/*Footer*/
+/*Shake de los iconos del footer*/
+@keyframes muevelo {
+  from {
+    transform: rotate(15deg); }
+  to {
+    transform: rotate(-15deg);
+    transform-origin: center; } }
+
+.shake:hover {
+  animation: muevelo 0.1s ease-in-out infinite alternate; }
