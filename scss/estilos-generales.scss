@@ -60,10 +60,10 @@ $pantalla-chica: 576px;
         display: none;
     }
 }
-@mixin activo(){
-  .active{border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829);}
+/*Localizador del menu*/
+.active{
+  border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829);
 }
-
 .header-text{
     color: rgba(46, 46, 46, 0.911);
     
@@ -88,4 +88,14 @@ $pantalla-chica: 576px;
     animation: muevelo 0.1s ease-in-out infinite alternate;
   }
 }
+footer{
+  .a--black{
+    color: black;
+    &:hover{
+      color: grey;
+    } 
+  }
+}
+
+
 

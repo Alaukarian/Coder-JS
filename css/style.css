@@ -44,6 +44,12 @@
   .header-text {
     display: none; } }
 
+/*Localizador del menu*/
+.active {
+  border: solid;
+  border-width: 2px 0px 2px 0px;
+  color: rgba(179, 156, 26, 0.829); }
+
 .header-text {
   color: rgba(46, 46, 46, 0.911); }
   .header-text:hover {
@@ -61,3 +67,8 @@
 
 .shake:hover {
   animation: muevelo 0.1s ease-in-out infinite alternate; }
+
+footer .a--black {
+  color: black; }
+  footer .a--black:hover {
+    color: grey; }
