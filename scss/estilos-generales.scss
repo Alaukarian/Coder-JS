@@ -1,3 +1,5 @@
+@import "contacto", "productos";
+
 $pantalla-grande: 992px;
 $pantalla-chica: 576px;
 /*Header*/
@@ -66,7 +68,6 @@ $pantalla-chica: 576px;
 }
 .header-text{
     color: rgba(46, 46, 46, 0.911);
-    
     &:hover{
         text-decoration: none;
         color: black;
@@ -96,6 +97,35 @@ footer{
     } 
   }
 }
-
-
+/*Main*/
+  /*Instagram iframe container*/
+  main{
+    .container--iframe{
+      border: solid;
+      border-color: rgb(236, 212, 179);
+      border-radius: 20px;
+      width: 73vw;
+      justify-content: center;
+      box-shadow: 3px 5px 3px gray;
+    }
+    .texto-gradiente{
+      background: linear-gradient(to right, rgb(243, 189, 40) 40%, rgb(219, 219, 14) 60%, rgb(255, 207, 51) 80%);
+      background-size: 250%;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradiente 4s ease-in-out infinite;
+      font-size: 7vh;
+      @keyframes gradiente {
+        to {
+          background-position: 250%;
+      }
+    }
+      a{
+        text-decoration: none;
+      }
+      @media screen and (max-width: 558px) {
+        font-size: 5vh;
+      }
+  }
+}
 

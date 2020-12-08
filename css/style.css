@@ -1,4 +1,23 @@
 @charset "UTF-8";
+/*Contacto*/
+/*Form*/
+.back-logo {
+  background: url(/media/utility/entre-ideas_logo.jpg) no-repeat top center; }
+
+.contacto {
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap; }
+  .gallery .gallery-item {
+    padding: 5px; }
+    .gallery .gallery-item:hover {
+      box-shadow: 3px 5px 3px gray;
+      mask: ''; }
+
 /*Header*/
 /*Header__Menu*/
 /*El mixin es copia de una seccion de bootstrap.css sobre navbar-expand en resolucion 992px, lo necesité para arreglar un problema de desincronización del h1/2 con el navbar
@@ -72,3 +91,30 @@ footer .a--black {
   color: black; }
   footer .a--black:hover {
     color: grey; }
+
+/*Main*/
+/*Instagram iframe container*/
+main .container--iframe {
+  border: solid;
+  border-color: #ecd4b3;
+  border-radius: 20px;
+  width: 73vw;
+  justify-content: center;
+  box-shadow: 3px 5px 3px gray; }
+
+main .texto-gradiente {
+  background: linear-gradient(to right, #f3bd28 40%, #dbdb0e 60%, #ffcf33 80%);
+  background-size: 250%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradiente 4s ease-in-out infinite;
+  font-size: 7vh; }
+
+@keyframes gradiente {
+  to {
+    background-position: 250%; } }
+  main .texto-gradiente a {
+    text-decoration: none; }
+  @media screen and (max-width: 558px) {
+    main .texto-gradiente {
+      font-size: 5vh; } }
