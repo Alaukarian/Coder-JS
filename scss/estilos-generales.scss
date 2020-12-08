@@ -1,3 +1,5 @@
+@import "contacto", "productos";
+
 $pantalla-grande: 992px;
 $pantalla-chica: 576px;
 /*Header*/
@@ -37,7 +39,7 @@ $pantalla-chica: 576px;
         display: none;
       }
     }
-/* Media query's para ajustar el menu y el h1/2 segun la resolucion*/
+/* Media querys para ajustar el menu y el h1/2 segun la resolucion*/
 @media screen and (min-width: $pantalla-chica){
     .navbar-collapse--center{
         justify-content: center;
@@ -60,15 +62,70 @@ $pantalla-chica: 576px;
         display: none;
     }
 }
-@mixin activo(){
-  .active{border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829);}
+/*Localizador del menu*/
+.active{
+  border: solid; border-width: 2px 0px 2px 0px; color:rgba(179, 156, 26, 0.829);
 }
-
 .header-text{
     color: rgba(46, 46, 46, 0.911);
-    
     &:hover{
         text-decoration: none;
         color: black;
     }
 }
+/*Footer*/
+  /*Shake de los iconos del footer*/
+@keyframes muevelo{
+  from{
+    transform: rotate(15deg)
+  }
+  to{
+    transform: rotate(-15deg);
+    transform-origin: center;
+  }
+}
+.shake{
+  &:hover{
+    animation: muevelo 0.1s ease-in-out infinite alternate;
+  }
+}
+footer{
+  .a--black{
+    color: black;
+    &:hover{
+      color: grey;
+    } 
+  }
+}
+/*Main*/
+  /*Instagram iframe container*/
+  main{
+    .container--iframe{
+      border: solid;
+      border-color: rgb(236, 212, 179);
+      border-radius: 20px;
+      width: 73vw;
+      justify-content: center;
+      box-shadow: 3px 5px 3px gray;
+    }
+    .texto-gradiente{
+      background: linear-gradient(to right, rgb(243, 189, 40) 40%, rgb(219, 219, 14) 60%, rgb(255, 207, 51) 80%);
+      background-size: 250%;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradiente 4s ease-in-out infinite;
+      font-size: 7vh;
+      @keyframes gradiente {
+        to {
+          background-position: 250%;
+      }
+    }
+      a{
+        text-decoration: none;
+      }
+      @media screen and (max-width: 558px) {
+        font-size: 5vh;
+      }
+  }
+}
+

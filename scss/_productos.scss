@@ -1,0 +1,11 @@
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    .gallery-item{
+        padding: 5px;
+        &:hover{
+            box-shadow: 3px 5px 3px gray;
+            mask:'';
+        }
+    }
+}
