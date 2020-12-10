@@ -7,16 +7,30 @@
 .contacto {
   position: relative;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  border: solid;
+  border-radius: 25px;
+  width: 20vw; }
 
 .gallery {
   display: flex;
   flex-flow: row wrap; }
   .gallery .gallery-item {
-    padding: 5px; }
+    padding: 0px 0px 0px 5px; }
     .gallery .gallery-item:hover {
       box-shadow: 3px 5px 3px gray;
       mask: ''; }
+  .gallery .gallery-item--caption:before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 99%;
+    background-color: crimson;
+    opacity: 0.5;
+    transition: 0.5s;
+    bottom: 0px; }
+  .gallery .gallery-item--caption:hover:before {
+    height: 100%; }
 
 /*Header*/
 /*Header__Menu*/
@@ -61,7 +75,8 @@
     left: 50%;
     transform: translateX(-50%); }
   .header-text {
-    display: none; } }
+    display: none;
+    text-decoration: none; } }
 
 /*Localizador del menu*/
 .active {

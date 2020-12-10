@@ -2,10 +2,26 @@
     display: flex;
     flex-flow: row wrap;
     .gallery-item{
-        padding: 5px;
+        padding: 0px 0px 0px 5px;
         &:hover{
             box-shadow: 3px 5px 3px gray;
             mask:'';
+
+        }
+    }
+    .gallery-item--caption{
+        &:before{
+            content: "";
+            position: absolute;
+            height: 0%;
+            width: 99%;
+            background-color: crimson;
+            opacity: 0.5;
+            transition: 0.5s;
+            bottom:0px;
+        }
+        &:hover:before{
+            height: 100%;
         }
     }
 }
