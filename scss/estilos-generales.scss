@@ -1,4 +1,4 @@
-@import "contacto", "productos";
+@import "contacto", "productos", "quienes";
 
 $pantalla-grande: 992px;
 $pantalla-chica: 576px;
@@ -127,6 +127,44 @@ footer{
       @media screen and (max-width: 558px) {
         font-size: 5vh;
       }
+    }
+    .gallery-item--index{
+      padding: 0px 0px 0px 5px;
+      &:hover{
+          box-shadow: 3px 5px 3px gray;
+          mask:'';
+      }
+    }
+    .gallery-item--captionindex{
+      &:before{
+        content: "";
+        position: absolute;
+        height: 0%;
+        width: 99%;
+        background-color: beige;
+        opacity: 0.5;
+        transition: 0.5s;
+        top:0px;
+      }
+      &:hover:before{
+          height: 100%;
+      }
+  }
+  .gallery__overlay--text{
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    &:hover{
+      opacity: 1;
+    }
   }
 }
 

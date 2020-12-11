@@ -4,13 +4,19 @@
 .back-logo {
   background: url(/media/utility/entre-ideas_logo.jpg) no-repeat top center; }
 
-.contacto {
-  position: relative;
-  display: flex;
-  justify-content: center;
+.contacto__form {
+  background-color: blanchedalmond;
   border: solid;
+  width: 430px;
+  flex-flow: column nowrap;
   border-radius: 25px;
-  width: 20vw; }
+  padding: 10px;
+  opacity: 0.94; }
+  .contacto__form .btn--form {
+    margin-left: 336px;
+    border: solid;
+    border-color: grey;
+    border-width: 1px; }
 
 .gallery {
   display: flex;
@@ -25,12 +31,33 @@
     position: absolute;
     height: 0%;
     width: 99%;
-    background-color: crimson;
+    background-color: #fca740;
     opacity: 0.5;
     transition: 0.5s;
     bottom: 0px; }
   .gallery .gallery-item--caption:hover:before {
-    height: 100%; }
+    height: 30%; }
+  .gallery .gallery__overlay {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+    padding-top: 95%; }
+    .gallery .gallery__overlay:hover {
+      opacity: 1; }
+
+.quienes {
+  border: solid;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 4px 6px 4px black;
+  background-color: rgba(252, 244, 232, 0.699); }
 
 /*Header*/
 /*Header__Menu*/
@@ -133,3 +160,37 @@ main .texto-gradiente {
   @media screen and (max-width: 558px) {
     main .texto-gradiente {
       font-size: 5vh; } }
+
+main .gallery-item--index {
+  padding: 0px 0px 0px 5px; }
+  main .gallery-item--index:hover {
+    box-shadow: 3px 5px 3px gray;
+    mask: ''; }
+
+main .gallery-item--captionindex:before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 99%;
+  background-color: beige;
+  opacity: 0.5;
+  transition: 0.5s;
+  top: 0px; }
+
+main .gallery-item--captionindex:hover:before {
+  height: 100%; }
+
+main .gallery__overlay--text {
+  position: absolute;
+  top: 0%;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px; }
+  main .gallery__overlay--text:hover {
+    opacity: 1; }

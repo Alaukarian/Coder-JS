@@ -9,6 +9,7 @@
     <title>Entre Indeas - Home</title>
 </head>
 <body>
+  <!--Header-->
     <header class="sticky-top shadow mb-3 bg-white">
       <a href="index.html" class="header-text">
         <h1 class="header-text">ENTRE IDEAS</h1>
@@ -29,9 +30,9 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item text-center" href="/pages/productos.html">Todos</a>
                   <hr class="m-0">
-                  <a class="dropdown-item text-center" href="#">Cuadernos</a>
-                  <a class="dropdown-item text-center" href="#">Bandejas</a>
-                  <a class="dropdown-item text-center" href="#">Latas</a>
+                  <a class="dropdown-item text-center" href="/pages/productos.html#gallery__cuadernos">Cuadernos</a>
+                  <a class="dropdown-item text-center" href="/pages/productos.html#gallery__bandejas">Bandejas</a>
+                  <a class="dropdown-item text-center" href="/pages/productos.html#gallery__latas">Latas</a>
                 </div>
               </li>
             <li class="nav-item">
@@ -44,12 +45,24 @@
         </div>
       </nav>
     </header>
+    <!--Main-->
     <main>
+      <div class="container">
+        <h3 class="pl-4 mt-5" id="top">Destacados</h3>
+        <div class="row">
+          <div class="gallery">
+            <figure class="gallery-item--index gallery-item--captionindex col-xl-4 col-md-4 col-sm-12 col-12"><img style="width: 100%; height: 100%;" src="/media/content/cuadernos/cuaderno-pattern-multicolor.jpeg" alt="cuaderno pattern cuaderno-pattern-multicolor" srcset=""><a href="/pages/productos-cuadernos.html"><div class="gallery__overlay--text">Cuaderno Solid Slider Multicolor</div></a></figure>
+            <figure class="gallery-item--index gallery-item--captionindex col-xl-4 col-md-4 col-sm-12 col-12"><img style="width: 100%; height: 100%;" src="/media/content/bandejas/bandeja-eggs.jpeg" alt="cuaderno-cross-rojo"><a href="/pages/productos-bandejas.html"><div class="gallery__overlay--text">Bandeja Fesh Farm</div></a></figure>
+            <figure class="gallery-item--index gallery-item--captionindex col-xl-4 col-md-4 col-sm-12 col-12"><img style="width: 100%; height: 100%;" src="/media/content/latas/lata-channel.jpeg" alt="cuaderno-cross-violeta"><a href="/pages/productos-latas.html"><div class="gallery__overlay--text">Lata Channel N°5</div></a></figure>
+          </div>
+        </div>
+      </div>
       <div class="container-fluid container--iframe d-flex flex-wrap mb-5">
        <iframe width="320" height="460" src="https://www.instagram.com/p/BixbVxNn1kl/embed" frameborder="0"></iframe>
        <h3 class="align-self-center justify-self-center pl-4 texto-gradiente"><a href="https://www.instagram.com/entreideas_" target="_blank">SEGUINOS EN INSTAGRAM!</a></h3>
       </div>
     </main>
+    <!--Footer-->
     <footer>
       <div class="container">
           <div class="row">
