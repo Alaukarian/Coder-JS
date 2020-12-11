@@ -194,3 +194,13 @@ main .gallery__overlay--text {
   padding-top: 50px; }
   main .gallery__overlay--text:hover {
     opacity: 1; }
+
+main .main__image {
+  width: 30vw;
+  height: 36vh;
+  min-width: 400px;
+  min-height: 300px; }
+  @media screen and (max-width: 992px) {
+    main .main__image {
+      width: 400px;
+      height: 300px; } }

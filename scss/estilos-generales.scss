@@ -166,5 +166,15 @@ footer{
       opacity: 1;
     }
   }
+  .main__image{
+    width: 30vw;
+    height: 36vh;
+    min-width: 400px;
+    min-height: 300px;
+    @media screen and (max-width: $pantalla-grande) {
+      width: 400px;
+      height: 300px;
+    }
+  }
 }
 
