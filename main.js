@@ -1,3 +1,5 @@
+const item1 = new items("Zapatillas", "Nike", "Air Max 3", 25000, 200);
+const item2 = new items("Campera", "Adidas", "Sin frio", 15000, 10);
 class items{
     constructor (tipo, marca, modelo, precio, stock){
         this.tipo = tipo;
@@ -46,5 +48,3 @@ function devolverTodo(){
     alert("Su carrito fue limpiado");
     item1.stock = 200;
 }
-const item1 = new items("Zapatillas", "Nike", "Air Max 3", 25000, 200);
-const item2 = new items("Campera", "Adidas", "Sin frio", 15000, 10);
