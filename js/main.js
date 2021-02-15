@@ -1,15 +1,30 @@
 
-Articulos = [{articulo: "Cuaderno Solid Slider Multicolor", precio: 200 },
-            {articulo: "Cuaderno Multicross Red", precio: 210 },
-            {articulo: "Cuaderno Cross Smoke Violet", precio: 300 },
-            {articulo: "Cuaderno Flower Pink", precio: 400 },
-            {articulo: "Cuaderno Multicross Violet", precio: 250 },
-            {articulo: "Cuaderno Mountain Negro", precio: 150 }];
+/*Articulos = [{precio: 200, articulo: "Cuaderno Solid Slider Multicolor"},//Cuaderno Solid Slider Multicolor
+            {precio: 210, articulo: "Cuaderno Multicross Red"},//Cuaderno Multicross Red
+            {precio: 300, articulo: "Cuaderno Cross Smoke Violet"},//Cuaderno Cross Smoke Violet
+            {precio: 400, articulo: "Cuaderno Flower Pink"}, //Cuaderno Flower Pink
+            {precio: 250, articulo: "Cuaderno Multicross Violet"}, //Cuaderno Multicross Violet
+            {precio: 150, articulo: "Cuaderno Mountain Negro"}]; //Cuaderno Mountain Negro*/
+const preciosArray = [200, 210, 300, 400, 250, 150];
+
+var arrayOrdenado = preciosArray.sort();
+
+function reemplazaNumeros(){
+    arrayOrdenado.splice(0,1,"Cuaderno Mountain Negro");
+    arrayOrdenado.splice(1,1,"Cuaderno Solid Slider Multicolor");
+    arrayOrdenado.splice(2,1,"Cuaderno Multicross Violet");
+    arrayOrdenado.splice(3,1,"Cuaderno Multicross Red");
+    arrayOrdenado.splice(4,1,"Cuaderno Cross Smoke Violet");
+    arrayOrdenado.splice(5,1,"Cuaderno Flower Pink");
+}
 
 function buscador(){
-    inputPrecio = parseInt(prompt("Cual es el precio maximo que busca?"));
-    const filtroPrecio = Articulos.find(articulo => articulo.precio >= inputPrecio);
-    alert("El cuaderno recomendado por su precio maximo es: " + JSON.stringify(filtroPrecio));
+    alert(preciosArray);
+    let respuestaArray = prompt("Quiere ordenar los precios de mayor a menor? y/n");
+    if (respuestaArray == "y"){
+        reemplazaNumeros();
+        alert(arrayOrdenado);
+    }
 }
 
 /*Sistema provisional de compra*/ //Ejercicio 
