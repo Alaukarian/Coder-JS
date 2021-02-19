@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/*Galeria Principal*/
+.gallery {
+  display: flex;
+  flex-flow: row wrap; }
+  .gallery .gallery-item {
+    padding: 0px 0px 0px 5px; }
+    .gallery .gallery-item:hover {
+      box-shadow: 3px 5px 3px gray;
+      mask: ''; }
+  .gallery .gallery-item--caption:before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 99%;
+    background-color: #fca740;
+    opacity: 0.5;
+    transition: 0.5s;
+    bottom: 0px; }
+  .gallery .gallery-item--caption:hover:before {
+    height: 30%; }
+  .gallery .gallery__overlay {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+    padding-top: 95%; }
+    .gallery .gallery__overlay:hover {
+      opacity: 1; }
+    .gallery__link{
+      color: white;}
+    .gallery__link:hover{
+      color: white;
+      text-decoration: none;}
+    
+
+/*Header*/
+/*Header__Menu*/
+/*El mixin es copia de una seccion de bootstrap.css sobre navbar-expand en resolucion 992px, lo necesité para arreglar un problema de desincronización del h1/2 con el navbar
+        sin comprometer ni escribir más codigo*/
+/* Media querys para ajustar el menu y el h1/2 segun la resolucion*/
+@media screen and (min-width: 576px) {
+  .navbar-collapse--center {
+    justify-content: center; }
+  .header-text {
+    text-align: center; }
+  .navbar-brand {
+    display: none; }
+  .navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute; }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto; }
+  .navbar-expand-lg .navbar-toggler {
+    display: none; } }
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+  .header-text {
+    display: none;
+    text-decoration: none; } }
+
+/*Localizador del menu*/
+.active {
+  border: solid;
+  border-width: 2px 0px 2px 0px;
+  color: rgba(179, 156, 26, 0.829); }
+
+.header-text {
+  color: rgba(46, 46, 46, 0.911); }
+  .header-text:hover {
+    text-decoration: none;
+    color: black; }
+
+/*Footer*/
+/*Shake de los iconos del footer*/
+@keyframes muevelo {
+  from {
+    transform: rotate(15deg); }
+  to {
+    transform: rotate(-15deg);
+    transform-origin: center; } }
+
+.shake:hover {
+  animation: muevelo 0.1s ease-in-out infinite alternate; }
+
+footer .a--black {
+  color: black; }
+  footer .a--black:hover {
+    color: grey; }
+
+/*Menu compra*/
+.botonera{
+  position: relative;
+  left: 40px;
+  display: flex;
+}
+.botonera__botones{
+  margin-left:100px;
+}
