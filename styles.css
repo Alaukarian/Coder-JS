@@ -14,3 +14,12 @@ textarea{
 .inputItem{
     width: 15px;
 }
+#generalPanel{
+    border: solid;
+    width: 340px;
+    text-align: center;
+    position: relative;
+    left: 140%;
+    top: 80px;
+    overflow: hidden;
+}
