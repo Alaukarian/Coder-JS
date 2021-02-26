@@ -15,6 +15,8 @@ let resta2 = document.getElementById("btnSumar2");
 let resta3 = document.getElementById("btnSumar3");
     resta3.addEventListener('click', restaItem3());
 */
+//Los argumentos de arriba no funcionaban, ejecutaban directamente las funciones, no esperaban al click.
+
 function sumarItem1(){
     contador[0] +=1;
     document.getElementById("item1Input").innerHTML = contador[0];
