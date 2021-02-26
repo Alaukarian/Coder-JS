@@ -16,48 +16,48 @@ let resta3 = document.getElementById("btnSumar3");
     resta3.addEventListener('click', restaItem3());
 */
 function sumarItem1(){
-    contador[1] +=1;
-    document.getElementById("item1Input").innerHTML = contador[1];
+    contador[0] +=1;
+    document.getElementById("item1Input").innerHTML = contador[0];
     carrito.push(articulos[0]);
     console.log(carrito);
 }
 
 function sumarItem2(){
     contador[1] +=1;
-    document.getElementById("item2Input").innerHTML = contador;
+    document.getElementById("item2Input").innerHTML = contador[1];
     carrito.push(articulos[1]);
     console.log(carrito);
 }
 
 function sumarItem3(){
     contador[2] +=1;
-    document.getElementById("item3Input").innerHTML = contador;
+    document.getElementById("item3Input").innerHTML = contador[2];
     carrito.push(articulos[2]);
     console.log(carrito);
 }
 function restaItem1(){
-    if (contador.length > 0){
+    if (contador[0] > 0){
         contador[0] -=1;
-        document.getElementById("item1Input").innerHTML = contador;
+        document.getElementById("item1Input").innerHTML = contador[0];
         carrito.pop();
         console.log(carrito);
         }else{alert("Valor invalido");
 }}
 
 function restaItem2(){
-    if (contador.length > 0){
+    if (contador[1] > 0){
         contador[1] -=1;
-        document.getElementById("item2Input").innerHTML = contador;
+        document.getElementById("item2Input").innerHTML = contador[1];
         carrito.pop();
         console.log(carrito);
         }else{alert("Valor invalido");
 }}
 
 function restaItem3(){
-    if (contador.length > 0){
+    if (contador[2] > 0){
     contador[2] -=1;
-    document.getElementById("item3Input").innerHTML = contador;
+    document.getElementById("item3Input").innerHTML = contador[2];
     carrito.pop();
     console.log(carrito);
-    }alert("Valor invalido");
+    }else{alert("Valor invalido");}
 }
