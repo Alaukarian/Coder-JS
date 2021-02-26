@@ -1,4 +1,5 @@
 var carrito = [];
+const carroVacio = [];
 const articulos = ["item1", "item2", "item3"];
 let contador = [0, 0, 0];
 /*
@@ -22,6 +23,7 @@ function sumarItem1(){
     document.getElementById("item1Input").innerHTML = contador[0];
     carrito.push(articulos[0]);
     console.log(carrito);
+    document.getElementById("generalPanel").innerHTML = carrito;
 }
 
 function sumarItem2(){
@@ -29,6 +31,7 @@ function sumarItem2(){
     document.getElementById("item2Input").innerHTML = contador[1];
     carrito.push(articulos[1]);
     console.log(carrito);
+    document.getElementById("generalPanel").innerHTML = carrito;
 }
 
 function sumarItem3(){
@@ -36,6 +39,7 @@ function sumarItem3(){
     document.getElementById("item3Input").innerHTML = contador[2];
     carrito.push(articulos[2]);
     console.log(carrito);
+    document.getElementById("generalPanel").innerHTML = carrito;
 }
 function restaItem1(){
     if (contador[0] > 0){
@@ -44,7 +48,11 @@ function restaItem1(){
         carrito.pop();
         console.log(carrito);
         }else{alert("Valor invalido");
-}}
+        }document.getElementById("generalPanel").innerHTML = carrito;
+        if(carrito.length == carroVacio.length){
+            document.getElementById("generalPanel").innerHTML = "Tu carrito esta vacio!";
+        }
+    }
 
 function restaItem2(){
     if (contador[1] > 0){
@@ -53,7 +61,11 @@ function restaItem2(){
         carrito.pop();
         console.log(carrito);
         }else{alert("Valor invalido");
-}}
+}document.getElementById("generalPanel").innerHTML = carrito;
+    if(carrito.length == carroVacio.length){
+        document.getElementById("generalPanel").innerHTML = "Tu carrito esta vacio!";
+    }
+}
 
 function restaItem3(){
     if (contador[2] > 0){
@@ -62,4 +74,8 @@ function restaItem3(){
     carrito.pop();
     console.log(carrito);
     }else{alert("Valor invalido");}
+    document.getElementById("generalPanel").innerHTML = carrito;
+    if(carrito.length == carroVacio.length){
+        document.getElementById("generalPanel").innerHTML = "Tu carrito esta vacio!";
+    }
 }
